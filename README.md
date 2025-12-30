@@ -23,7 +23,7 @@ contact.html: Formë kontakti me validim në anën e klientit.
 
 /react-version: Aplikacioni i plotë në React.
 
-# Teknologjitë e Përdorura
+## Teknologjitë e Përdorura
 Front-end: HTML5, CSS3, JavaScript (ES6+).
 
 Frameworks: React.js, Tailwind CSS (në versionin React).
@@ -56,37 +56,33 @@ Interactive UI: Përdorimi i React Components për një eksperiencë më të shp
 | Anëtari | Detyra |
 | :--- | :--- |
 | **Sara Vishi** | Team Lead, React |
-| **Emri 2** | Developer, HTML |
-| **Emri 3** | Developer, CSS dhe JavaScript |
+| **Jona Guri** | Developer, HTML |
+| **Anita Berisha** | Developer, CSS dhe JavaScript |
 
-## Struktura e projektit
-UEB-GRUPL-42-1/
-│
-├── 📁 css/ # CSS për projektin kryesor
-│ └── style.css # Të gjitha stilet (Grid, Flexbox, Animacione)
-│
-├── 📁 js/ # JavaScript files
-│ ├── main.js # Funksionaliteti kryesor
-│ └── validation.js # Validimi i formës së kontaktit
-│
-├── 📁 images/ # Fotot dhe assets
-│ ├── car1.jpg, car2.jpg, ... # Fotot e makinave
-│ └── logo.png # Logo e kompanisë
-│
-├── 📁 react-version/ # PROJEKTI REACT (i veçantë)
-│ ├── 📁 src/
-│ │ ├── components/ # Komponentët React
-│ │ ├── pages/ # Faqet
-│ │ └── App.jsx Aplikacioni kryesor
-│ ├── package.json # Dependencies
-│ └── tailwind.config.js # Konfigurimi i Tailwind CSS
-│
-├── 📄 index.html # 🏠 Faqja Kryesore
-├── 📄 products.html # 🚗 Të gjitha Makinat (me filtra)
-├── 📄 services.html # 🛠️ Shërbimet dhe çmimet
-├── 📄 contact.html # 📞 Kontakt (me formë validuese)
-├── 📄 about.html # ℹ️ Rreth Nesh
-│
-├── 📄 .gitignore # Skedarët që nuk ngarkohen në Git
-├── 📄 README.md # 📖 Ky dokument
-└── 📄 package.json # Vetëm për react-version/
+## STRUKTURA E PROJEKTIT
+
+📁 UEB-GRUPL-42-1/
+├── 📁 css/
+│   └── 📄 style.css
+├── 📁 js/
+│   ├── 📄 main.js
+│   └── 📄 validation.js
+├── 📁 images/
+│   ├── 📄 car1.jpg
+│   └── 📄 logo.png
+├── 📁 react-version/
+│   ├── 📁 src/
+│   │   ├── 📁 components/
+│   │   ├── 📁 pages/
+│   │   └── 📄 App.jsx
+│   ├── 📄 package.json
+│   └── 📄 tailwind.config.js
+├── 📄 index.html
+├── 📄 products.html
+├── 📄 services.html
+├── 📄 contact.html
+├── 📄 about.html
+├── 📄 .gitignore
+├── 📄 README.md
+└── 📄 package.json
+
