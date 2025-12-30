@@ -128,3 +128,200 @@ function initializePage() {
             break;
     }
 }
+
+function displayFeaturedCars() {
+    const container = document.getElementById('featuredCars');
+    if (!container) return;
+   
+    const featuredCars = carsData.filter(car => car.featured);
+   
+    container.innerHTML = featuredCars.map(car => `
+        <div class="car-card" data-id="${car.id}">
+            <img src="${car.image}" alt="${car.brand} ${car.model}">
+            <div class="car-info">
+                <h3>${car.brand} ${car.model}</h3>
+                <p class="car-details">
+                    <i class="fas fa-calendar"></i> ${car.year} |
+                    <i class="fas fa-tachometer-alt"></i> ${formatNumber(car.km)} km
+                </p>
+                <p class="car-details">
+                    <i class="fas fa-gas-pump"></i> ${car.fuel} |
+                    <i class="fas fa-cog"></i> ${car.transmission}
+                </p>
+                <p class="price">${formatPrice(car.price)}</p>
+                <p class="description">${car.description}</p>
+                <button class="btn-details" onclick="showCarDetails(${car.id})">
+                    <i class="fas fa-info-circle"></i> Shiko Detajet
+                </button>
+            </div>
+        </div>
+    `).join('');
+}
+
+function setupSearch() {
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+   
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            if (searchTerm) {
+                
+                const results = carsData.filter(car =>
+                    car.brand.toLowerCase().includes(searchTerm) ||
+                    car.model.toLowerCase().includes(searchTerm) ||
+                    car.description.toLowerCase().includes(searchTerm)
+                );
+               
+                if (results.length > 0) {
+                    alert(`U gjetën ${results.length} makina për "${searchTerm}"`);
+                    
+                    window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    alert(`Nuk u gjet asnjë makinë për "${searchTerm}"`);
+                }
+            } else {
+                alert('Ju lutem shkruani diçka për të kërkuar!');
+            }
+        });
+       
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    }
+}
+
+function displayAllCars() {
+    const gridContainer = document.getElementById('allCarsGrid');
+    if (!gridContainer) return;
+   
+    gridContainer.innerHTML = carsData.map(car => `
+        <div class="car-card" data-brand="${car.brand.toLowerCase()}"
+             data-price="${car.price}" data-year="${car.year}">
+            <img src="${car.image}" alt="${car.brand} ${car.model}">
+            <div class="car-info">
+                <h3>${car.brand} ${car.model}</h3>
+                <p class="car-details">
+                    <i class="fas fa-calendar"></i> ${car.year} |
+                    <i class="fas fa-tachometer-alt"></i> ${formatNumber(car.km)} km
+                </p>
+                <p class="price">${formatPrice(car.price)}</p>
+                <div class="car-actions">
+                    <button class="btn-details" onclick="showCarDetails(${car.id})">
+                        <i class="fas fa-info-circle"></i> Detajet
+                    </button>
+                    <button class="btn-contact" onclick="contactAboutCar(${car.id})">
+                        <i class="fas fa-phone"></i> Kontakto
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function setupTable() {
+    const tableBody = document.getElementById('carsTableBody');
+    if (!tableBody) return;
+   
+    tableBody.innerHTML = carsData.map(car => `
+        <tr data-id="${car.id}">
+            <td><strong>${car.brand}</strong></td>
+            <td>${car.model}</td>
+            <td>${car.year}</td>
+            <td>${formatNumber(car.km)} km</td>
+            <td class="price-cell">${formatPrice(car.price)}</td>
+            <td>
+                <span class="status ${car.featured ? 'featured' : 'available'}">
+                    ${car.featured ? 'E Rekomanduar' : 'Në Dispozicion'}
+                </span>
+            </td>
+            <td>
+                <button class="btn-small" onclick="showCarDetails(${car.id})">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn-small btn-success" onclick="contactAboutCar(${car.id})">
+                    <i class="fas fa-phone"></i>
+                </button>
+            </td>
+        </tr>
+    `).join('');
+}
+
+function setupFilters() {
+    const applyBtn = document.getElementById('applyFilters');
+    const resetBtn = document.getElementById('resetFilters');
+   
+    if (applyBtn) {
+        applyBtn.addEventListener('click', function() {
+            applyCarFilters();
+        });
+    }
+   
+    if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+            resetCarFilters();
+        });
+    }
+}
+
+function applyCarFilters() {
+    const brandFilter = document.getElementById('brandFilter').value;
+    const priceFilter = document.getElementById('priceFilter').value;
+    const yearFilter = document.getElementById('yearFilter').value;
+   
+    let filteredCars = carsData;
+   
+    if (brandFilter) {
+        filteredCars = filteredCars.filter(car =>
+            car.brand.toLowerCase() === brandFilter.toLowerCase()
+        );
+    }
+   
+    if (priceFilter) {
+        const [min, max] = priceFilter.split('-').map(Number);
+        filteredCars = filteredCars.filter(car =>
+            car.price >= min && car.price <= max
+        );
+    }
+   
+    if (yearFilter) {
+        const [startYear, endYear] = yearFilter.split('-').map(Number);
+        filteredCars = filteredCars.filter(car =>
+            car.year >= startYear && car.year <= endYear
+        );
+    }
+   
+    updateFilteredDisplay(filteredCars);
+   
+    const notification = document.createElement('div');
+    notification.className = 'filter-notification';
+    notification.innerHTML = `
+        <p>U gjetën ${filteredCars.length} makina me filtrat e zgjedhur</p>
+        <button onclick="this.parentElement.remove()">&times;</button>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: #2ecc71;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 300px;
+    `;
+   
+    document.body.appendChild(notification);
+   
+    setTimeout(() => {
+        if (notification.parentElement) {
+            notification.remove();
+        }
+    }, 3000);
+}
