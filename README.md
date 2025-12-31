@@ -59,31 +59,6 @@ Interactive UI: Përdorimi i React Components për një eksperiencë më të shp
 | **Jona Guri** | Developer, HTML |
 | **Anita Berisha** | Developer, CSS dhe JavaScript |
 
-## Struktura e projektit
-UEB-GRUPI-42-1/
-├── css/
-│ └── style.css
-├── js/
-│ ├── main.js
-│ └── validation.js
-├── images/
-│ ├── car1.jpg
-│ └── logo.png
-├── react-version/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ └── App.jsx
-│ ├── package.json
-│ └── tailwind.config.js
-├── index.html
-├── products.html
-├── services.html
-├── contact.html
-├── about.html
-├── .gitignore
-├── README.md
-└── package.json
 
 
 
