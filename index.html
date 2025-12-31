@@ -1,1 +1,113 @@
-//html
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoShitje - Gjej Makinën tënde të ëndrrave</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- HEADER - Tag semantik -->
+    <header class="header">
+        <!-- NAV - Tag semantik -->
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>AutoShitje</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Kreu</a></li>
+                <li><a href="products.html"><i class="fas fa-car"></i> Makinat</a></li>
+                <li><a href="services.html"><i class="fas fa-tools"></i> Shërbimet</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> Rreth Nesh</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Kontakt</a></li>
+            </ul>
+            <button class="btn-login" id="loginBtn"><i class="fas fa-user"></i> Kyçu</button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION - Tag semantik -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Gjej Makinën e Ëndrrave tënde</h2>
+            <p>+1000 makina nga markat më të mira në treg</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Çfarë makine po kërkoni?">
+                <button id="searchBtn"><i class="fas fa-search"></i> Kërko</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED CARS - Tag semantik -->
+    <section class="featured">
+        <h2><i class="fas fa-star"></i> Makinat e Rekomanduara</h2>
+        <div class="cars-grid" id="featuredCars">
+            <!-- Makinat do të shtohen me JavaScript -->
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS - Tag semantik -->
+    <article class="testimonials">
+        <h2>Çfarë Thonë Klientët Tanë</h2>
+        <div class="testimonial-grid">
+            <div class testimonial-card>
+                <img src="images/client1.jpg" alt="Klient 1">
+                <h3>Arben Krasniqi</h3>
+                <p>"Gjeta makinën time të ëndrrave me një çmim shumë të mirë!"</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/client2.jpg" alt="Klient 2">
+                <h3>Liridona Gashi</h3>
+                <p>"Shërbim shumë profesional dhe makina në gjendje të shkëlqyer."</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- FOOTER - Tag semantik -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-car"></i> AutoShitje</h3>
+                <p>Platforma më e mirë për blerje dhe shitje të makinave në Kosovë.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Lidhuni me ne</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rr. Nënë Tereza, Prishtinë</p>
+                <p><i class="fas fa-phone"></i> +383 44 123 456</p>
+                <p><i class="fas fa-envelope"></i> info@autoshitje.com</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 AutoShitje. Të gjitha të drejtat e rezervuara.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
