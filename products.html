@@ -2,125 +2,40 @@
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoShitje - Të gjitha Makinat</title>
+    <title>AutoShitje - Shërbimet</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-car"></i>
-                <h1>AutoShitje</h1>
-            </div>
+            <div class="logo"><i class="fas fa-car"></i> <h1>AutoShitje</h1></div>
             <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Kreu</a></li>
-                <li><a href="products.html" class="active"><i class="fas fa-car"></i> Makinat</a></li>
-                <li><a href="services.html"><i class="fas fa-tools"></i> Shërbimet </a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> Rreth Nesh</a></li>
-                <li><a href="contact.html"><i class="fas fa-phone"></i> Kontakt</a></li>
+                <li><a href="index.html">Kreu</a></li>
+                <li><a href="products.html">Makinat</a></li>
+                <li><a href="services.html" class="active">Shërbimet</a></li>
+                <li><a href="about.html">Rreth Nesh</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
             </ul>
-            <button class="btn-login"><i class="fas fa-user"></i> Kyçu</button>
         </nav>
     </header>
 
-    <main class="main-content">
-        <section class="page-header">
-            <h1><i class="fas fa-car-side"></i> Të gjitha Makinat</h1>
-            <p>Zgjidhni nga koleksioni ynë i gjerë i makinave të reja dhe të përdorura</p>
-        </section>
-
-       
-        <section class="filters-section">
-            <div class="filters">
-                <div class="filter-group">
-                    <label for="brandFilter"><i class="fas fa-tag"></i> Marka:</label>
-                    <select id="brandFilter" class="filter-select">
-                        <option value="">Të gjitha</option>
-                        <option value="mercedes">Mercedes-Benz</option>
-                        <option value="bmw">BMW</option>
-                        <option value="audi">Audi</option>
-                        <option value="volkswagen">Volkswagen</option>
-                        <option value="toyota">Toyota</option>
-                    </select>
-                </div>
-               
-                <div class="filter-group">
-                    <label for="priceFilter"><i class="fas fa-euro-sign"></i> Çmimi:</label>
-                    <select id="priceFilter" class="filter-select">
-                        <option value="">Të gjitha</option>
-                        <option value="0-10000">0 - 10,000 €</option>
-                        <option value="10000-25000">10,000 - 25,000 €</option>
-                        <option value="25000-50000">25,000 - 50,000 €</option>
-                        <option value="50000-100000">50,000 - 100,000 €</option>
-                    </select>
-                </div>
-               
-                <div class="filter-group">
-                    <label for="yearFilter"><i class="fas fa-calendar"></i> Viti:</label>
-                    <select id="yearFilter" class="filter-select">
-                        <option value="">Të gjitha</option>
-                        <option value="2020-2024">2020 - 2024</option>
-                        <option value="2015-2019">2015 - 2019</option>
-                        <option value="2010-2014">2010 - 2014</option>
-                        <option value="2000-2009">2000 - 2009</option>
-                    </select>
-                </div>
-               
-                <button id="applyFilters" class="btn-filter"><i class="fas fa-filter"></i> Filtro</button>
-                <button id="resetFilters" class="btn-reset"><i class="fas fa-redo"></i> Reset</button>
-            </div>
-        </section>
-
-       
-        <section class="cars-table-section">
-            <h2><i class="fas fa-table"></i> Tabela e Makinave</h2>
-            <table class="cars-table">
-                <thead>
-                    <tr>
-                        <th>Marka</th>
-                        <th>Modeli</th>
-                        <th>Viti</th>
-                        <th>Kilometrazha</th>
-                        <th>Çmimi</th>
-                        <th>Statusi</th>
-                        <th>Veprimet</th>
-                    </tr>
-                </thead>
-                <tbody id="carsTableBody">
-                   
-                </tbody>
-            </table>
-        </section>
-
-     
-        <section class="cars-grid-section">
-            <h2><i class="fas fa-th"></i> Pamje Grid</h2>
-            <div class="cars-grid" id="allCarsGrid">
-              
-            </div>
-        </section>
-
-     
-        <div class="pagination">
-            <button class="page-btn" disabled><i class="fas fa-chevron-left"></i> Para</button>
-            <span class="page-numbers">
-                <button class="page-number active">1</button>
-                <button class="page-number">2</button>
-                <button class="page-number">3</button>
-                <span>...</span>
-                <button class="page-number">10</button>
-            </span>
-            <button class="page-btn">Pas <i class="fas fa-chevron-right"></i></button>
+    <main class="main-content" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <div class="services-grid">
+            <div class="service-card"><i class="fas fa-tools fa-2x"></i> <h3>Mirëmbajtje</h3><p>Servisim periodik dhe diagnostikim.</p></div>
+            <div class="service-card"><i class="fas fa-handshake fa-2x"></i> <h3>Financim</h3><p>Kredi dhe sigurime CASCO.</p></div>
+            <div class="service-card"><i class="fas fa-shuttle-van fa-2x"></i> <h3>Transport</h3><p>Transport në gjithë rajonin.</p></div>
         </div>
+
+        <table class="price-table">
+            <thead><tr><th>Shërbimi</th><th>Koha</th><th>Çmimi</th></tr></thead>
+            <tbody>
+                <tr><td>Ndërrim vaji</td><td>1 orë</td><td>60 €</td></tr>
+                <tr><td>Frena</td><td>2 orë</td><td>120 €</td></tr>
+            </tbody>
+        </table>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 AutoShitje. Të gjitha të drejtat e rezervuara.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <footer class="footer"><p>&copy; 2024 AutoShitje</p></footer>
 </body>
 </html>

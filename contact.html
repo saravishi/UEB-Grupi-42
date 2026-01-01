@@ -2,8 +2,7 @@
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoShitje - Na Kontaktoni</title>
+    <title>AutoShitje - Kontakt</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -11,156 +10,30 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-car"></i>
-                <h1>AutoShitje</h1>
-            </div>
+            <div class="logo"><i class="fas fa-car"></i> <h1>AutoShitje</h1></div>
             <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Kreu</a></li>
-                <li><a href="products.html"><i class="fas fa-car"></i> Makinat</a></li>
-                <li><a href="services.html"><i class="fas fa-tools"></i> Shërbimet</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> Rreth Nesh</a></li>
-                <li><a href="contact.html" class="active"><i class="fas fa-phone"></i> Kontakt</a></li>
+                <li><a href="index.html">Kreu</a></li>
+                <li><a href="products.html">Makinat</a></li>
+                <li><a href="services.html">Shërbimet</a></li>
+                <li><a href="about.html">Rreth Nesh</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
             </ul>
-              <button class="btn-login" id="loginBtn"><i class="fas fa-user"></i> Kyçu</button>
-      
         </nav>
     </header>
 
-    <main class="main-content">
-        <section class="contact-hero">
-            <h1><i class="fas fa-envelope"></i> Na Kontaktoni</h1>
-            <p>Jemi këtu për t'ju ndihmuar me çdo pyetje që keni</p>
-        </section>
-
-        <div class="contact-container">
-           
-            <section class="contact-form-section">
-                <h2><i class="fas fa-paper-plane"></i> Dërgo një mesazh</h2>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="fullName"><i class="fas fa-user"></i> Emri i plotë *</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Shkruani emrin tuaj të plotë">
-                        <span class="error-message" id="nameError"></span>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email"><i class="fas fa-envelope"></i> Email *</label>
-                            <input type="email" id="email" name="email" placeholder="email@shembull.com">
-                            <span class="error-message" id="emailError"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone"><i class="fas fa-phone"></i> Telefon</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+383 XX XXX XXX">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject"><i class="fas fa-tag"></i> Subjekti</label>
-                        <select id="subject" name="subject">
-                            <option value="">Zgjidhni një opsion</option>
-                            <option value="info">Kërkim informacioni</option>
-                            <option value="testdrive">Kërkoj test drive</option>
-                            <option value="service">Rezervim shërbimi</option>
-                            <option value="complaint">Ankim</option>
-                            <option value="other">Tjetër</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="carModel"><i class="fas fa-car"></i> Makina e interesuar (nëse ka)</label>
-                        <input type="text" id="carModel" name="carModel" placeholder="P.sh. Mercedes C200 2022">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message"><i class="fas fa-comment"></i> Mesazhi juaj *</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Shkruani mesazhin tuaj këtu..."></textarea>
-                        <span class="error-message" id="messageError"></span>
-                        <div class="char-counter">
-                            Karaktere: <span id="charCount">0</span>/500
-                        </div>
-                    </div>
-
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="newsletter" name="newsletter">
-                        <label for="newsletter">Dëshiroj të marr lajme dhe oferta</label>
-                    </div>
-
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">Pajtohem me <a href="#">kushtet e përdorimit</a> *</label>
-                        <span class="error-message" id="termsError"></span>
-                    </div>
-
-                    <button type="submit" class="btn-submit" id="submitBtn">
-                        <i class="fas fa-paper-plane"></i> Dërgo Mesazhin
-                    </button>
-                   
-                    <div id="formMessage" class="form-message"></div>
-                </form>
-            </section>
-
-            
-            <aside class="contact-info">
-                <h2><i class="fas fa-info-circle"></i> Informacione kontakti</h2>
-               
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Adresa jonë</h3>
-                        <p>Rr. Nënë Tereza, Nr. 123</p>
-                        <p>10000 Prishtinë, Kosovë</p>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3>Numrat e telefonit</h3>
-                        <p>+383 44 123 456 (Shitje)</p>
-                        <p>+383 44 789 012 (Shërbim)</p>
-                        <p>+383 38 123 456 (Zyra)</p>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Email</h3>
-                        <p>info@autoshitje.com</p>
-                        <p>shitje@autoshitje.com</p>
-                        <p>servis@autoshitje.com</p>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h3>Orari i punës</h3>
-                        <p>E Hënë - E Premte: 08:00 - 20:00</p>
-                        <p>E Shtunë: 09:00 - 18:00</p>
-                        <p>E Dielë: 10:00 - 16:00</p>
-                    </div>
-                </div>
-
-                <div class="map-placeholder">
-                    <h3><i class="fas fa-map"></i> Gjeolokacioni</h3>
-                    <div class="map">
-                        
-                        <img src="https://via.placeholder.com/400x200?text=Harta+e+Prishtinës" alt="Map">
-                    </div>
-                </div>
-            </aside>
-        </div>
+    <main style="max-width: 800px; margin: 40px auto; padding: 20px;">
+        <form id="contactForm" class="contact-form">
+            <h2>Na dërgoni mesazh</h2>
+            <input type="text" id="fullName" placeholder="Emri i plotë" required>
+            <input type="email" id="email" placeholder="Email adresa" required>
+            <textarea id="message" rows="5" placeholder="Mesazhi juaj"></textarea>
+            <div style="font-size: 0.8rem;">Karaktere: <span id="charCount">0</span>/500</div>
+            <button type="submit" class="btn-submit">Dërgo</button>
+            <div id="formMessage" style="display:none; margin-top:10px; color:green; font-weight:bold;"></div>
+        </form>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 AutoShitje. Të gjitha të drejtat e rezervuara.</p>
-    </footer>
-
+    <footer class="footer"><p>&copy; 2024 AutoShitje</p></footer>
     <script src="js/validation.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
