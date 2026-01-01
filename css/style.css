@@ -1,180 +1,326 @@
-/* --- PALETA E RE: Gold & Carbon Luxury --- */
-:root {
-    --gold: #c5a059;         /* Ngjyrë ari elegante */
-    --carbon: #1a1a1a;       /* E zezë e hirtë */
-    --slate: #2d3436;        /* Gri e errët */
-    --cream: #fdfdfd;        /* E bardhë krem */
-    --text: #444;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: var(--text);
+html {
+    scroll-behavior: smooth;
 }
 
-/* --- NAVBAR PA TË KUQE DHE BLU --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+
 .header {
-    background: var(--carbon);
-    padding: 1.2rem 0;
+    background: linear-gradient(90deg, #2c3e50, #3498db);
+    color: white;
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
 }
 
-.logo h1 {
-    color: var(--gold) !important;
-    font-size: 1.6rem;
-    -webkit-text-fill-color: var(--gold) !important; /* Heq gradientin e mëparshëm */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 }
 
 .nav-links a {
-    color: #ccc;
+    color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: var(--gold);
+.nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.nav-links a.active {
+    background: #e74c3c;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
 }
 
 .btn-login {
-    background: var(--gold);
-    color: var(--carbon);
+    background: #e74c3c;
+    color: white;
     border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 5px;
-    font-weight: 700;
-    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* --- HERO SECTION --- */
+
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1500&q=80') center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    color: white;
     text-align: center;
-}
-
-.hero h2 {
-    color: var(--gold);
-    font-size: 3rem;
-    border: none;
-    margin-bottom: 1rem;
+    padding: 6rem 2rem;
+    margin-bottom: 3rem;
 }
 
 .search-box {
-    background: white;
-    padding: 5px;
-    border-radius: 50px; /* Rrumbullakim i plotë */
     display: flex;
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 2rem auto 0;
 }
 
 .search-box input {
-    border: none;
-    padding: 1rem 2rem;
     flex: 1;
-    border-radius: 50px;
-    outline: none;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
 }
 
 .search-box button {
-    background: var(--carbon);
-    color: var(--gold);
+    background: #e74c3c;
+    color: white;
     border: none;
-    padding: 0 2.5rem;
-    border-radius: 50px;
+    padding: 1rem 2rem;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-weight: bold;
 }
 
-/* --- MAKINAT (CAR CARDS) --- */
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    justify-content: center;
+}
+
 .car-card {
     background: white;
-    border-bottom: 4px solid var(--gold); /* Linjë ari poshtë */
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
-    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.car-card h3 {
-    color: var(--carbon);
-    margin-top: 1rem;
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.car-card p {
-    color: var(--gold);
-    font-weight: bold;
-    font-size: 1.2rem;
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* --- TESTIMONIALS (ARBENI & LIRIDONA) --- */
-.testimonials {
-    background: var(--carbon);
-    color: white;
-    padding: 5rem 2rem;
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    flex-wrap: wrap;
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    align-items: stretch;
 }
 
 .testimonial-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    width: 350px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonial-card img {
-    width: 90px;
-    height: 90px;
-    border: 3px solid var(--gold);
-    filter: grayscale(20%); /* I jep pamje më serioze */
-}
-
-.testimonial-card h3 {
-    color: var(--gold);
-    margin: 1rem 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    margin-bottom: 1rem;
 }
 
 .rating i {
-    color: var(--gold); /* Yjet bëhen ngjyrë ari */
+    color: #f1c40f;
+    margin-top: 1rem;
+    font-size: 1.1rem;
 }
 
-/* --- FOOTER --- */
 .footer {
-    background: #111;
-    border-top: 2px solid var(--gold);
-    padding: 4rem 0 2rem;
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;               
+    min-width: 250px;      
 }
 
 .footer-section h3 {
-    color: var(--gold);
+    color: #3498db;
+    margin-bottom: 1.2rem;
+    text-align: left;      
+    border-bottom: none;   
+}
+
+.footer-section p {
+    color: #bdc3c7;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;            
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: var(--gold);
+    color: #3498db;
+    transform: translateY(-3px); 
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #95a5a6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.car-card, .testimonial-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+.cars-table-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    overflow-x: auto; 
+}
+
+.cars-table {
+    width: 100%;
+    border-collapse: collapse; 
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cars-table th {
+    background: #2c3e50;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.cars-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+
+.cars-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+
+.cars-table tbody tr:hover {
+    background-color: #f1f7ff;
+    transition: background 0.3s ease;
+}
+
+
+.cars-table button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 1rem; }
+    .nav-links { flex-wrap: wrap; justify-content: center; }
 }
