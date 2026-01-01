@@ -20,6 +20,7 @@ body {
 h1, h2, h3, h4 {
     margin-bottom: 1rem;
     color: #2c3e50;
+    text-align: center;
 }
 
 h1 {
@@ -27,13 +28,16 @@ h1 {
     background: linear-gradient(45deg, #3498db, #2ecc71);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-top: 2rem;
 }
 
 h2 {
     font-size: 2rem;
     border-bottom: 3px solid #3498db;
     padding-bottom: 0.5rem;
-    display: inline-block;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
 }
 
 
@@ -133,12 +137,13 @@ h2 {
 
 
 .cars-grid {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
+    justify-content: center;
 }
 
 .car-card {
@@ -168,6 +173,7 @@ h2 {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 2rem;
+    align-items: stretch;
 }
 
 .testimonial-card {
@@ -176,6 +182,9 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonial-card img {
@@ -186,6 +195,11 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.rating i {
+    color: #f1c40f;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
 
 .footer {
     background: #2c3e50;
