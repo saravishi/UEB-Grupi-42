@@ -121,7 +121,17 @@ function setupFilters() {
     const reset = document.getElementById("resetFilters");
 
     if (apply) apply.addEventListener("click", applyFilters);
-    if (reset) reset.addEventListener("click", () => displayAllCars());
+    
+    if (reset) {
+        reset.addEventListener("click", () => {
+           
+            document.getElementById("brandFilter").value = "";
+            document.getElementById("priceFilter").value = "";
+            document.getElementById("yearFilter").value = "";
+            
+            displayAllCars(carsData);
+        });
+    }
 }
 
 function applyFilters() {
@@ -130,36 +140,27 @@ function applyFilters() {
     const year = document.getElementById("yearFilter")?.value;
     let result = carsData;
 
-    
     if (brand) {
-        
-        const brandMap = {
-            "mercedes": "Mercedes",
-            "bmw": "BMW",
-            "audi": "Audi",
-            "volkswagen": "Volkswagen",
-            "toyota": "Toyota"
-        };
-
-        const selectedBrand = brandMap[brand] || "";
-        if (selectedBrand) {
-            result = result.filter(c => c.brand === selectedBrand);
-        }
+        result = result.filter(c => c.brand.toLowerCase().includes(brand));
     }
 
-    
     if (price) {
         const [min, max] = price.split("-").map(Number);
         result = result.filter(c => c.price >= min && c.price <= max);
     }
 
-    
     if (year) {
         const [minY, maxY] = year.split("-").map(Number);
         result = result.filter(c => c.year >= minY && c.year <= maxY);
     }
 
     displayAllCars(result);
+    
+    const grid = document.getElementById("allCarsGrid");
+    if (result.length === 0) {
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 2rem; font-weight: bold; color: #e74c3c;">
+            Nuk u gjet asnjë makinë me këto kritere. Provo përsëri!</p>`;
+    }
 }
 
 function showCarDetails(id) {
