@@ -2,40 +2,154 @@
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
-    <title>AutoShitje - Shërbimet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoShitje - Shërbimet tona</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="logo"><i class="fas fa-car"></i> <h1>AutoShitje</h1></div>
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>AutoShitje</h1>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html">Kreu</a></li>
-                <li><a href="products.html">Makinat</a></li>
-                <li><a href="services.html" class="active">Shërbimet</a></li>
-                <li><a href="about.html">Rreth Nesh</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Kreu</a></li>
+                <li><a href="products.html"><i class="fas fa-car"></i> Makinat</a></li>
+                <li><a href="services.html" class="active"><i class="fas fa-tools"></i> Shërbimet</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> Rreth Nesh</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Kontakt</a></li>
             </ul>
+              <button class="btn-login" id="loginBtn"><i class="fas fa-user"></i> Kyçu</button>
         </nav>
     </header>
+      
 
-    <main class="main-content" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-        <div class="services-grid">
-            <div class="service-card"><i class="fas fa-tools fa-2x"></i> <h3>Mirëmbajtje</h3><p>Servisim periodik dhe diagnostikim.</p></div>
-            <div class="service-card"><i class="fas fa-handshake fa-2x"></i> <h3>Financim</h3><p>Kredi dhe sigurime CASCO.</p></div>
-            <div class="service-card"><i class="fas fa-shuttle-van fa-2x"></i> <h3>Transport</h3><p>Transport në gjithë rajonin.</p></div>
-        </div>
+    <main class="main-content">
+        <section class="services-hero">
+            <h1><i class="fas fa-concierge-bell"></i> Shërbimet tona</h1>
+            <p>Ofrojmë një gamë të plotë shërbimesh për makinat tuaja</p>
+        </section>
 
-        <table class="price-table">
-            <thead><tr><th>Shërbimi</th><th>Koha</th><th>Çmimi</th></tr></thead>
-            <tbody>
-                <tr><td>Ndërrim vaji</td><td>1 orë</td><td>60 €</td></tr>
-                <tr><td>Frena</td><td>2 orë</td><td>120 €</td></tr>
-            </tbody>
-        </table>
+        
+        <section class="services-list">
+            <h2><i class="fas fa-list"></i> Lista e Shërbimeve</h2>
+            <div class="services-container">
+                <div class="service-category">
+                    <h3><i class="fas fa-shopping-cart"></i> Shitje & Blerje</h3>
+                    <ul class="service-items">
+                        <li><i class="fas fa-check-circle"></i> Vlerësim i makinës suaj</li>
+                        <li><i class="fas fa-check-circle"></i> Ndërmjetësim në shitje</li>
+                        <li><i class="fas fa-check-circle"></i> Kërkime të personalizuara</li>
+                        <li><i class="fas fa-check-circle"></i> Test drive</li>
+                        <li><i class="fas fa-check-circle"></i> Asistencë në dokumente</li>
+                    </ul>
+                </div>
+               
+                <div class="service-category">
+                    <h3><i class="fas fa-tools"></i> Mirëmbajtje</h3>
+                    <ol class="service-items">
+                        <li>Servisim periodik</li>
+                        <li>Ndërrim vajesh dhe filtra</li>
+                        <li>Diagnostikim kompjuterik</li>
+                        <li>Rregullim frenash</li>
+                        <li>Shërbim suspensioni</li>
+                    </ol>
+                </div>
+               
+                <div class="service-category">
+                    <h3><i class="fas fa-file-contract"></i> Financim & Sigurime</h3>
+                    <ul class="service-items">
+                        <li><i class="fas fa-handshake"></i> Kredi automjetesh</li>
+                        <li><i class="fas fa-file-signature"></i> Sigurime CASCO</li>
+                        <li><i class="fas fa-calculator"></i> Llogaritje kestesh</li>
+                        <li><i class="fas fa-shield-alt"></i> Garancioni i zgjatur</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+      
+        <section class="pricing-table">
+            <h2><i class="fas fa-euro-sign"></i> Tabela e Çmimeve për Servisim</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Shërbimi</th>
+                        <th>Përshkrimi</th>
+                        <th>Kohëzgjatja</th>
+                        <th>Çmimi</th>
+                        <th>Rezervo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fas fa-oil-can"></i> Ndërrim vaji</td>
+                        <td>Ndërrim i vajit dhe filtrit të vajit</td>
+                        <td>1 orë</td>
+                        <td>60 €</td>
+                        <td><button class="btn-book">Rezervo</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-tire"></i> Rrotullim gomash</td>
+                        <td>Rrotullim dhe balancim i gomave</td>
+                        <td>45 min</td>
+                        <td>40 €</td>
+                        <td><button class="btn-book">Rezervo</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-braille"></i> Rregullim frenash</td>
+                        <td>Ndërrim pllakash dhe diskonesh</td>
+                        <td>2 orë</td>
+                        <td>120 €</td>
+                        <td><button class="btn-book">Rezervo</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-battery-full"></i> Ndërrim baterie</td>
+                        <td>Ndërrim baterie dhe testim sistem elektrik</td>
+                        <td>30 min</td>
+                        <td>80 €</td>
+                        <td><button class="btn-book">Rezervo</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-spray-can"></i> Lavazh i plotë</td>
+                        <td>Lavazh, pastrim motorri dhe vakum</td>
+                        <td>1 orë</td>
+                        <td>25 €</td>
+                        <td><button class="btn-book">Rezervo</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        
+        <section class="additional-services">
+            <h2><i class="fas fa-plus-circle"></i> Shërbime shtesë</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <i class="fas fa-shuttle-van"></i>
+                    <h3>Transport i makinave</h3>
+                    <p>Transportim të makinave në të gjithë Kosovën dhe rajonin.</p>
+                </article>
+                <article class="service-card">
+                    <i class="fas fa-key"></i>
+                    <h3>Dorëzim në shtëpi</h3>
+                    <p>Dorëzim i makinës direkt te adresa juaj.</p>
+                </article>
+                <article class="service-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Konsultime</h3>
+                    <p>Konsultime të specializuara për blerjen e parë të makinës.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer"><p>&copy; 2024 AutoShitje</p></footer>
+    <footer class="footer">
+        <p>&copy; 2024 AutoShitje. Të gjitha të drejtat e rezervuara.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
