@@ -1,11 +1,10 @@
-/* --- PALETA E RE: Midnight & Slate --- */
+/* --- PALETA E RE: Gold & Carbon Luxury --- */
 :root {
-    --primary-color: #1e293b;    /* Slate Dark */
-    --accent-color: #3b82f6;     /* Bright Blue */
-    --secondary-color: #64748b;  /* Muted Slate */
-    --bg-light: #f8fafc;        /* Clean White/Blue */
-    --white: #ffffff;
-    --danger: #ef4444;           /* Red for login/active */
+    --gold: #c5a059;         /* Ngjyrë ari elegante */
+    --carbon: #1a1a1a;       /* E zezë e hirtë */
+    --slate: #2d3436;        /* Gri e errët */
+    --cream: #fdfdfd;        /* E bardhë krem */
+    --text: #444;
 }
 
 * {
@@ -14,259 +13,168 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    color: var(--primary-color);
-    background-color: var(--bg-light);
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: var(--text);
 }
 
-/* --- HEADINGS --- */
-h1, h2, h3 {
-    font-weight: 700;
-    color: var(--primary-color);
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(45deg, #1e293b, #3b82f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h2 {
-    font-size: 2.2rem;
-    margin: 3rem auto;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: var(--accent-color);
-    border-radius: 10px;
-}
-
-/* --- HEADER & NAVBAR --- */
+/* --- NAVBAR PA TË KUQE DHE BLU --- */
 .header {
-    background: var(--white);
-    padding: 1rem 0;
+    background: var(--carbon);
+    padding: 1.2rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .logo h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    background: none;
-    -webkit-text-fill-color: var(--primary-color);
-}
-
-.logo i {
-    color: var(--accent-color);
-    font-size: 1.8rem;
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
+    color: var(--gold) !important;
+    font-size: 1.6rem;
+    -webkit-text-fill-color: var(--gold) !important; /* Heq gradientin e mëparshëm */
 }
 
 .nav-links a {
-    color: var(--secondary-color);
+    color: #ccc;
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: var(--accent-color);
+    color: var(--gold);
 }
 
 .btn-login {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--gold);
+    color: var(--carbon);
     border: none;
-    padding: 0.7rem 1.8rem;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-login:hover {
-    background: var(--accent-color);
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* --- HERO SECTION --- */
 .hero {
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
-                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80') center/cover;
-    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1500&q=80') center/cover;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    text-align: center;
 }
 
 .hero h2 {
-    color: white;
+    color: var(--gold);
     font-size: 3rem;
     border: none;
+    margin-bottom: 1rem;
 }
-
-.hero h2::after { display: none; }
 
 .search-box {
     background: white;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 50px; /* Rrumbullakim i plotë */
     display: flex;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .search-box input {
     border: none;
-    padding: 1rem;
-    width: 350px;
+    padding: 1rem 2rem;
+    flex: 1;
+    border-radius: 50px;
     outline: none;
-    font-size: 1rem;
 }
 
 .search-box button {
-    background: var(--accent-color);
-    color: white;
+    background: var(--carbon);
+    color: var(--gold);
     border: none;
-    padding: 0 2rem;
-    border-radius: 10px;
+    padding: 0 2.5rem;
+    border-radius: 50px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-/* --- CAR CARDS --- */
-.cars-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    padding: 2rem;
-}
-
+/* --- MAKINAT (CAR CARDS) --- */
 .car-card {
-    background: var(--white);
-    border-radius: 20px;
+    background: white;
+    border-bottom: 4px solid var(--gold); /* Linjë ari poshtë */
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.4s;
-    border: 1px solid #f1f5f9;
-}
-
-.car-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.car-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+    transition: 0.3s;
 }
 
 .car-card h3 {
-    text-align: left;
-    padding: 1.5rem 1.5rem 0.5rem;
-    font-size: 1.3rem;
+    color: var(--carbon);
+    margin-top: 1rem;
 }
 
 .car-card p {
-    padding: 0 1.5rem 1.5rem;
-    color: var(--accent-color);
-    font-weight: 800;
+    color: var(--gold);
+    font-weight: bold;
     font-size: 1.2rem;
 }
 
-/* --- TESTIMONIALS --- */
+/* --- TESTIMONIALS (ARBENI & LIRIDONA) --- */
 .testimonials {
-    background: #f1f5f9;
-    padding: 4rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    background: var(--carbon);
+    color: white;
+    padding: 5rem 2rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .testimonial-card {
-    background: white;
-    padding: 2.5rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 3rem 2rem;
     border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    width: 350px;
 }
 
 .testimonial-card img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    object-fit: cover;
-    border: 3px solid var(--accent-color);
+    width: 90px;
+    height: 90px;
+    border: 3px solid var(--gold);
+    filter: grayscale(20%); /* I jep pamje më serioze */
+}
+
+.testimonial-card h3 {
+    color: var(--gold);
+    margin: 1rem 0;
+}
+
+.rating i {
+    color: var(--gold); /* Yjet bëhen ngjyrë ari */
 }
 
 /* --- FOOTER --- */
 .footer {
-    background: var(--primary-color);
-    color: #f8fafc;
-    padding: 4rem 2rem 1rem;
+    background: #111;
+    border-top: 2px solid var(--gold);
+    padding: 4rem 0 2rem;
 }
 
 .footer-section h3 {
-    color: var(--white);
-    text-align: left;
-    margin-bottom: 1.5rem;
-}
-
-.footer-section h3 i {
-    color: var(--accent-color);
-}
-
-.social-links a {
-    background: rgba(255,255,255,0.1);
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 10px;
-    transition: 0.3s;
+    color: var(--gold);
 }
 
 .social-links a:hover {
-    background: var(--accent-color);
+    color: var(--gold);
 }
