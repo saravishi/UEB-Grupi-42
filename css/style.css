@@ -324,3 +324,59 @@ h2 {
     .navbar { flex-direction: column; gap: 1rem; }
     .nav-links { flex-wrap: wrap; justify-content: center; }
 }
+
+.social-links a {
+    color: white !important;
+}
+
+.social-links a:hover {
+    color: #3498db !important;
+}
+
+.pagination {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 12px;
+    margin: 4rem 0 !important;
+    width: 100%;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.page-btn, .page-number {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #2c3e50;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.page-number.active {
+    background-color: #e74c3c !important;
+    color: white !important;
+    border-color: #e74c3c !important;
+}
+
+.page-btn:hover:not(:disabled), .page-number:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.page-btn:disabled {
+    background-color: #f5f6fa;
+    color: #a4b0be;
+    cursor: not-allowed;
+}
+
+.footer-section h3 {
+    text-align: left !important;
+    border-bottom: none !important;
+}
