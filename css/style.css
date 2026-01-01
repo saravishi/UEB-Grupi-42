@@ -204,19 +204,61 @@ h2 {
 .footer {
     background: #2c3e50;
     color: white;
-    padding: 3rem 0 1rem;
-    margin-top: 3rem;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
     padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
+.footer-section {
+    flex: 1;               
+    min-width: 250px;      
+}
+
+.footer-section h3 {
+    color: #3498db;
+    margin-bottom: 1.2rem;
+    text-align: left;      
+    border-bottom: none;   
+}
+
+.footer-section p {
+    color: #bdc3c7;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;            
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3498db;
+    transform: translateY(-3px); 
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #95a5a6;
+}
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
