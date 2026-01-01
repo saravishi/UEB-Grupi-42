@@ -1,31 +1,41 @@
-document.getElementById("contactForm")?.addEventListener("submit", function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
    
-    let isValid = true;
-    const name = document.getElementById("fullName").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
     
-    if(name.length < 3) {
-        alert("Emri duhet të jetë më i gjatë se 3 karaktere!");
-        isValid = false;
-    }
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .error { border: 2px solid #e74c3c !important; }
+        .shake { animation: shake 0.5s; }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    `;
+    document.head.appendChild(style);
 
-    if(!email.includes("@")) {
-        alert("Email nuk është valid!");
-        isValid = false;
-    }
-
-    if(isValid) {
-        
-        $(this).slideUp();
-        $("#formMessage").html("<h3>Mesazhi u dërgua me sukses!</h3>").fadeIn();
-        console.log("Data e dërgimit: " + new Date().toLocaleString()); 
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateForm()) {
+                alert("Mesazhi u dërgua!");
+                contactForm.reset();
+            }
+        });
     }
 });
 
+function validateForm() {
+    let isValid = true;
+    const name = document.getElementById('fullName');
+    const email = document.getElementById('email');
 
-document.getElementById("message")?.addEventListener("input", function() {
-    document.getElementById("charCount").innerText = this.value.length;
-});
+    if (name && name.value.length < 3) {
+        name.classList.add('error', 'shake');
+        isValid = false;
+    } else {
+        name?.classList.remove('error', 'shake');
+    }
+
+    return isValid;
+}
