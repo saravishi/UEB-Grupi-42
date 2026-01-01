@@ -30,18 +30,6 @@ Frameworks: React.js, Tailwind CSS (në versionin React).
 
 Libraritë: Animacione me CSS dhe validim me JS.
 
-## Si ta ekzekutoni projektin
-Versioni Standard
-Thjesht hapni skedarin index.html në çdo shfletues (browser).
-
-Versioni React
-Për të nisur versionin React, ndiqni këto hapa:
-
-Navigoni te dosja: cd react-version
-
-Instaloni varësitë: npm install
-
-Nisni projektin: npm run dev
 
 ## Veçoritë (Features)
 Responsive Design: Faqja përshtatet në të gjitha pajisjet (Mobile, Tablet, Desktop).
