@@ -9,7 +9,7 @@ const carsData = [
         fuel: "Diesel",           
         transmission: "Automatik", 
         color: "E bardhë",         
-        image: "/images/mercedes.jpg", 
+        image: "images/mercedes.jpg", 
         featured: true,
         description: "Makina e re luksoze në gjendje të shkëlqyer."
     },
@@ -23,7 +23,7 @@ const carsData = [
         fuel: "Benzinë",
         transmission: "Automatik",
         color: "E gjelbër",
-        image: "/images/bmw.jpg",
+        image: "images/bmw.jpg",
         featured: true,
         description: "Makina sportive e përdorur, performancë e lartë."
     },
@@ -37,7 +37,7 @@ const carsData = [
         fuel: "Benzinë",
         transmission: "Automatik",
         color: "E zezë",
-        image: "/images/audi.jpg",
+        image: "images/audi.jpg",
         featured: true,
         description: "Makina pothuajse e re, performancë sportive dhe luksoze."
     }
