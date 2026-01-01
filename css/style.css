@@ -1,220 +1,98 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
 }
 
-html {
-    scroll-behavior: smooth;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
-}
+body { background-color: var(--light-bg); line-height: 1.6; }
 
-
-h1, h2, h3, h4 {
-    margin-bottom: 1rem;
-    color: #2c3e50;
-}
-
-h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(45deg, #3498db, #2ecc71);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h2 {
-    font-size: 2rem;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 0.5rem;
-    display: inline-block;
-}
-
-
-.header {
-    background: linear-gradient(90deg, #2c3e50, #3498db);
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 5%;
+    background: var(--gradient);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.nav-links a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-2px);
-}
-
-.nav-links a.active {
-    background: #e74c3c;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.5rem;
-}
-
-.btn-login {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--secondary-color); transform: translateY(-2px); }
 
 
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 6rem 2rem;
-    margin-bottom: 3rem;
-}
-
-.search-box {
-    display: flex;
-    max-width: 600px;
-    margin: 2rem auto 0;
-}
-
-.search-box input {
-    flex: 1;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px 0 0 5px;
-}
-
-.search-box button {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-
-.cars-grid {
-    max-width: 1200px;
-    margin: 0 auto;
+.cars-grid, .services-grid, .values-grid, .stats-grid, .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
 }
 
-.car-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
+
+.car-card, .service-card, .value-card, .team-member, .stat-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.car-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.car-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
-
-.testimonial-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
     text-align: center;
+    border-bottom: 4px solid transparent;
 }
 
-.testimonial-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid #3498db;
-    margin-bottom: 1rem;
+.car-card:hover { transform: scale(1.03); border-color: var(--secondary-color); }
+
+
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 10px; overflow: hidden; }
+th, td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+th { background: var(--primary-color); color: white; }
+tr:nth-child(even) { background-color: #f9f9f9; } 
+
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
+input, select, textarea {
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
 
-.footer {
-    background: #2c3e50;
+input:focus { border-color: var(--accent-color); }
+
+.btn-submit, .btn-details, .btn-login {
+    background: var(--secondary-color);
     color: white;
-    padding: 3rem 0 1rem;
-    margin-top: 3rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 0 2rem;
-}
+.btn-submit:hover { background: #c0392b; letter-spacing: 1px; }
 
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.car-card, .testimonial-card {
-    animation: fadeIn 0.5s ease-out;
-}
+.footer { background: var(--gradient); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
 
 
 @media (max-width: 768px) {
-    .navbar { flex-direction: column; gap: 1rem; }
-    .nav-links { flex-wrap: wrap; justify-content: center; }
+    .navbar { flex-direction: column; gap: 15px; }
+    .nav-links { flex-direction: column; text-align: center; }
 }
