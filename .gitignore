@@ -1,2 +1,5 @@
 node_modules/
 react-version/node_modules/
+react-version/public/
+react-version/src/assets/
+
