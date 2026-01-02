@@ -39,3 +39,19 @@ function validateForm() {
 
     return isValid;
 }
+
+const messageInput = document.getElementById('message');
+const charDisplay = document.getElementById('charCount');
+
+if (messageInput && charDisplay) {
+    messageInput.addEventListener('input', function() {
+        const length = this.value.length;
+        charDisplay.textContent = length;
+        
+        if (length >= 500) {
+            charDisplay.style.color = 'red';
+        } else {
+            charDisplay.style.color = '#7f8c8d';
+        }
+    });
+}
