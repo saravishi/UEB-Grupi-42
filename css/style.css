@@ -929,3 +929,234 @@ h2 {
     text-align: center !important;
     width: 100%;
 }
+.history-container {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    padding: 20px;
+}
+
+/* Vija vertikale në mes */
+.timeline-line {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.history-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 60px;
+}
+
+/* Pika që pulson te vija */
+.history-dot {
+    position: absolute;
+    left: 22px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #3498db;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.history-date {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.history-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border-left: 5px solid #2ecc71;
+}
+
+.history-content:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.history-content h3 {
+    text-align: left;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.history-content h3 i {
+    color: #3498db;
+}
+
+/* Përshtatja për celularë */
+@media (max-width: 600px) {
+    .history-container { margin-left: 10px; }
+}
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Krijon kolonat automatikisht */
+    gap: 25px;
+    padding: 20px;
+}
+
+.value-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Hije e lehtë */
+    transition: transform 0.3s ease;
+    border-top: 4px solid #3498db;
+}
+
+.value-card:hover {
+    transform: translateY(-10px); /* Lëviz pak lart kur e prek me maus */
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.team-section {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* I vendos anash */
+    gap: 40px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.team-member {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Krijimi i fotos në rreth */
+.member-img-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 50%; /* Rreth perfekt */
+    border: 5px solid #3498db;
+}
+
+.member-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Nuk e shtyp foton */
+}
+
+.team-member h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 1.4rem;
+}
+
+.team-member .position {
+    color: #3498db;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.team-member .bio {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+}
+.stats-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.stats-section h2 {
+    color: white;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-card {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #2ecc71; /* Ngjyra e gjelbër për sukses */
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.stat-card p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Përshtatja për celularë */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr; /* 2 kolona në celular */
+    }
+}
