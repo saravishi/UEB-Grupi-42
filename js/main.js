@@ -53,7 +53,7 @@ const carsData = [
         fuel: "Diesel",
         transmission: "Automatik",
         color: "E zezë",
-        image: "images/porshe.jpg", 
+        image: "images/porsche.jpg", 
         featured: false,
         description: "Porsche Cayenne në gjendje shumë të mirë teknike, e përdorur."
     },
