@@ -1,3 +1,4 @@
+
 const carsData = [
     {
         id: 1,
@@ -40,6 +41,49 @@ const carsData = [
         image: "images/audi.jpg",
         featured: true,
         description: "Makina pothuajse e re, performancë sportive dhe luksoze."
+    },
+   
+    {
+        id: 4,
+        brand: "Porsche",
+        model: "911 Carrera",
+        year: 2023,
+        price: 135000,
+        km: 1200,
+        fuel: "Benzinë",
+        transmission: "Automatik",
+        color: "E kuqe",
+        image: "images/porsche.jpg",
+        featured: true,
+        description: "Ikonë e sportivitetit, gjendje perfekte dhe teknologji e fundit."
+    },
+    {
+        id: 5,
+        brand: "Volkswagen",
+        model: "Golf 8 GTI",
+        year: 2021,
+        price: 32000,
+        km: 45000,
+        fuel: "Benzinë",
+        transmission: "Automatik",
+        color: "E hirtë",
+        image: "images/vw-golf.jpg",
+        featured: false,
+        description: "Makina ideale për qytet dhe performancë, shumë ekonomike."
+    },
+    {
+        id: 6,
+        brand: "Ford",
+        model: "Mustang GT",
+        year: 2020,
+        price: 48500,
+        km: 52000,
+        fuel: "Benzinë",
+        transmission: "Manual",
+        color: "E kaltër",
+        image: "images/ford-mustang.jpg",
+        featured: true,
+        description: "Fuqi amerikane me motor V8 dhe zhurmë karakteristike."
     }
 ];
 
