@@ -55,7 +55,7 @@ const carsData = [
         color: "E zezë",
         image: "images/porshe-C.jpg", 
         featured: true,
-        description: "Porsche Cayenne në gjendje shumë të mirë teknike, i saposervisuar."
+        description: "Porsche Cayenne në gjendje shumë të mirë teknike, e përdorur."
     },
     {
         id: 5,
@@ -107,7 +107,6 @@ function initPage() {
         setupTable();
     }
     
-    // SHTOJE KËTË PJESË KËTU:
     if (page === "services.html") {
         setupServiceAnimations();
     }
@@ -155,7 +154,7 @@ function setupTable() {
             <td>${car.year}</td>
             <td>${formatNumber(car.km)} km</td>
             <td>${formatPrice(car.price)}</td>
-            <td>${car.featured ? "Rekomanduar" : "Normal"}</td>
+            <td>${car.featured ? "E re" : "E përdorur"}</td>
             <td><button onclick="showCarDetails(${car.id})">👁</button></td>
         </tr>
     `).join("");
@@ -209,7 +208,7 @@ function applyFilters() {
 }
 
 function showCarDetails(id) {
-    closeModal(); // Mbyll çdo modal ekzistues
+    closeModal(); 
 
     const car = carsData.find(c => c.id === id);
     if (!car) return;
@@ -264,24 +263,23 @@ function setupGlobalEvents() {
         if (e.key === "Escape") closeModal();
     });
 }
-// Funksioni për interaktivitetin e faqes Services
+
 function setupServiceAnimations() {
-    // Kur klikon butonin "Rezervo" te tabela e çmimeve
+    
     const bookButtons = document.querySelectorAll('.btn-book');
     bookButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Merr emrin e shërbimit nga rreshti i tabelës
+            
             const serviceName = this.closest('tr').cells[0].innerText;
             alert(`Ju faleminderit! Rezervimi për "${serviceName}" u dërgua me sukses. Do t'ju kontaktojmë së shpejti.`);
             
-            // Opsionale: E ndryshon butonin pasi klikohet
             this.textContent = "U dërgua";
             this.style.background = "#2ecc71";
             this.disabled = true;
         });
     });
 
-    // Animacion i thjeshtë për shfaqjen e kartave
+    
     const cards = document.querySelectorAll('.service-category, .service-card');
     cards.forEach((card, index) => {
         card.style.opacity = "0";
@@ -291,6 +289,6 @@ function setupServiceAnimations() {
         setTimeout(() => {
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
-        }, 150 * index); // I shfaq një nga një me vonesë të vogël
+        }, 150 * index); 
     });
 }
