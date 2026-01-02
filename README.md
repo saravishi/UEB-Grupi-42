@@ -56,10 +56,10 @@ Interactive Modals: Klikimi te "Detajet" hap një modal me specifikat teknike t�
 
 
 ## Ndarja e punëve
-| Anëtari | Detyra |Kontributi Specifik
+| Anëtari | Detyra |
 | :--- | :--- |
-| **Sara Vishi** | Team Lead, React |Arkitektura e projektit dhe integrimi i React.
-| **Jona Guri** | Developer, HTML |Struktura e faqeve dhe seksionet e shërbimeve.
-| **Anita Berisha** | Developer, CSS dhe JavaScript |Stilimi me Grid, logjika e filtrave dhe eventet dinamike.
+| **Sara Vishi** | Team Lead, React |
+| **Jona Guri** | Developer, HTML |
+| **Anita Berisha** | Developer, CSS dhe JavaScript |
 
 
