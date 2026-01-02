@@ -43,19 +43,19 @@ const carsData = [
         description: "Makina pothuajse e re, performancë sportive dhe luksoze."
     },
    
-    {
+ {
         id: 4,
         brand: "Porsche",
-        model: "911 Carrera",
-        year: 2023,
-        price: 135000,
-        km: 1200,
-        fuel: "Benzinë",
+        model: "Cayenne S",
+        year: 2010,
+        price: 21500, 
+        km: 185000,
+        fuel: "Diesel",
         transmission: "Automatik",
-        color: "E kuqe",
-        image: "images/porsche.jpg",
+        color: "E zezë",
+        image: "images/porshe-C.jpg", 
         featured: true,
-        description: "Ikonë e sportivitetit, gjendje perfekte dhe teknologji e fundit."
+        description: "Porsche Cayenne në gjendje shumë të mirë teknike, i saposervisuar."
     },
     {
         id: 5,
