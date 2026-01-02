@@ -10,7 +10,7 @@ const carsData = [
         fuel: "Diesel",           
         transmission: "Automatik", 
         color: "E bardhë",         
-        image: "images/mercedes.jpg", 
+        image: "images/s-class.jpg", 
         featured: true,
         description: "Makina e re luksoze në gjendje të shkëlqyer."
     },
@@ -53,7 +53,7 @@ const carsData = [
         fuel: "Diesel",
         transmission: "Automatik",
         color: "E zezë",
-        image: "images/porshe-C.jpg", 
+        image: "images/porshe.jpg", 
         featured: false,
         description: "Porsche Cayenne në gjendje shumë të mirë teknike, e përdorur."
     },
@@ -67,7 +67,7 @@ const carsData = [
         fuel: "Benzinë",
         transmission: "Automatik",
         color: "E hirtë",
-        image: "images/vw-golf.jpg",
+        image: "images/golf.jpg",
         featured: false,
         description: "Makina ideale për qytet dhe performancë, shumë ekonomike."
     },
