@@ -685,9 +685,6 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
-/* ============================================================
-   STYLING PËR FAQEN SERVICES.HTML (Shtuar e re)
-   ============================================================ */
 
 .services-hero {
     text-align: center;
@@ -744,10 +741,10 @@ h2 {
 }
 
 .service-items li i {
-    color: #2ecc71; /* Ngjyrë e gjelbër për checkmarks */
+    color: #2ecc71; 
 }
 
-/* Stilimi i Tabelës së Çmimeve */
+
 .pricing-table {
     max-width: 1100px;
     margin: 60px auto;
@@ -810,7 +807,6 @@ h2 {
     box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
-/* Seksioni i zi (Additional Services) */
 .additional-services {
     background: #1a252f;
     padding: 80px 20px;
@@ -856,4 +852,94 @@ h2 {
 .service-card h3 {
     color: white;
     margin-bottom: 15px;
+}
+
+.services-grid-main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.services-grid-main .service-category:nth-child(1),
+.services-grid-main .service-category:nth-child(2),
+.services-grid-main .service-category:nth-child(3) {
+    grid-column: span 2;
+}
+
+.services-grid-main .service-category:nth-child(4) {
+    grid-column: 2 / span 2; 
+}
+
+.services-grid-main .service-category:nth-child(5) {
+    grid-column: 4 / span 2; 
+}
+
+@media (max-width: 992px) {
+    .services-grid-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-grid-main .service-category {
+        grid-column: span 1 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.footer-logo {
+    color: #3498db !important;
+    text-align: left !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white !important;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #3498db !important;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #bdc3c7;
+}
+
+.footer-section p i {
+    color: #3498db;
+    margin-right: 10px;
+    width: 20px;
 }
