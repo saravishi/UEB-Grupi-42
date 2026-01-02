@@ -1,77 +1,79 @@
-/* Ngjyrat dhe Fonti - Paleta: Soft Slate & Sky */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+/* Ngjyrat dhe Fonti */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
+:root {
+  --primary-color: #0284c7;
+  --dark-slate: #0f172a;
+  --light-bg: #f8fafc;
+  --glass: rgba(255, 255, 255, 0.8);
+}
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif !important;
-  /* Sfondi: Një gri shumë e lehtë që anon nga bluja */
-  background-color: #f8fafc !important; 
-  color: #334155 !important;
+  background-color: var(--light-bg) !important;
+  color: #334155;
 }
 
-/* Animacioni i hyrjes */
-.view-transition {
-  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+/* Header-i me Gradient të lehtë */
+.main-header {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  padding: 80px 0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Kërkimi (Search Input) */
+.search-container {
+  background: white;
+  border-radius: 100px;
+  padding: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
 }
 
-/* Kartelat moderne - Të bardha të pastra me hije të butë */
-.card {
-  border-radius: 20px !important;
-  border: 1px solid rgba(226, 232, 240, 0.8) !important;
-  background: #ffffff !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+.search-container:focus-within {
+  box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.1);
+  border-color: var(--primary-color);
 }
 
-.card:hover {
-  transform: translateY(-7px) !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
-}
-
-/* Header-i - Gradient i lehtë dhe i pastër */
-header {
+/* Kartat e makinave */
+.car-card-custom {
+  border-radius: 24px !important;
   background: white !important;
-  border-bottom: 1px solid #f1f5f9 !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
-/* Butoni - Ngjyrë "Slate" (Gri-Blu) që duket shumë premium */
+.car-card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Butonat */
 .btn-dark {
-  background-color: #1e293b !important; 
-  border: none !important;
-  border-radius: 12px !important;
-  padding: 10px 25px !important;
+  background-color: var(--dark-slate) !important;
+  border-radius: 14px !important;
+  padding: 12px 24px !important;
   font-weight: 600 !important;
-  letter-spacing: 0.3px;
+  transition: all 0.3s ease !important;
 }
 
 .btn-dark:hover {
-  background-color: #334155 !important;
-  box-shadow: 0 10px 15px -3px rgba(30, 41, 59, 0.3) !important;
+  background-color: #1e293b !important;
+  transform: scale(1.02);
 }
 
-/* Badge (Viti) - Ngjyrë Mentë ose Blu e hapur Pastel */
-.bg-primary {
-  background-color: #e0f2fe !important; /* Sky Blue e lehtë */
-  color: #0369a1 !important; /* Tekst Blu i errët për kontrast */
-  font-weight: 700 !important;
-  border-radius: 10px !important;
-  padding: 6px 12px !important;
+/* Badge për Vitin */
+.badge-year {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 10px;
 }
 
-/* Çmimi - Një blu e fortë por e pastër */
-.text-primary {
-  color: #0284c7 !important;
-  font-weight: 700 !important;
-}
-
-/* Stil shtesë për foton që të mos duket e thjeshtë */
-.card-img-top {
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
-  transition: transform 0.5s ease;
+/* Modali */
+.modal-content {
+  border-radius: 30px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
 }
