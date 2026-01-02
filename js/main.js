@@ -88,12 +88,8 @@ function carCardHTML(car) {
             <img src="${car.image}" alt="${car.brand}">
             <div class="car-info">
                 <h3>${car.brand} ${car.model}</h3>
-                <p style="font-weight: bold; color: #2c3e50; margin-bottom: 15px;">
-                    ${formatPrice(car.price)}
-                </p>
-                <button class="btn-filter" style="width: 100%; height: auto;" onclick="showCarDetails(${car.id})">
-                    Detajet
-                </button>
+                <p class="car-price-centered">${formatPrice(car.price)}</p>
+                <button class="btn-details-new" onclick="showCarDetails(${car.id})">Detajet</button>
             </div>
         </div>
     `;
@@ -164,19 +160,25 @@ function applyFilters() {
 }
 
 function showCarDetails(id) {
-    closeModal();
+    closeModal(); // Mbyll çdo modal ekzistues
 
     const car = carsData.find(c => c.id === id);
     if (!car) return;
 
     const modal = `
-        <div id="carModal" class="modal-overlay">
+        <div id="carModal" class="modal-overlay" onclick="if(event.target == this) closeModal()">
             <div class="modal-content">
                 <button class="close-btn" onclick="closeModal()">✖</button>
+                <img src="${car.image}" alt="${car.brand}" style="width:100%; border-radius:10px; margin-bottom:15px;">
                 <h2>${car.brand} ${car.model}</h2>
-                <p>${car.description}</p>
-                <p><strong>${formatPrice(car.price)}</strong></p>
-                <button class="btn-testdrive" onclick="requestTestDrive()">Test Drive</button>
+                <div class="modal-specs">
+                    <span><i class="fas fa-calendar"></i> ${car.year}</span> | 
+                    <span><i class="fas fa-gas-pump"></i> ${car.fuel}</span> | 
+                    <span><i class="fas fa-road"></i> ${formatNumber(car.km)} km</span>
+                </div>
+                <p style="margin: 15px 0;">${car.description}</p>
+                <h3 style="color: #2c3e50; font-size: 1.5rem;">${formatPrice(car.price)}</h3>
+                <button class="btn-testdrive" onclick="requestTestDrive()">Rezervo Test Drive</button>
             </div>
         </div>
     `;
