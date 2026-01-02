@@ -88,8 +88,12 @@ function carCardHTML(car) {
             <img src="${car.image}" alt="${car.brand}">
             <div class="car-info">
                 <h3>${car.brand} ${car.model}</h3>
-                <p>${formatPrice(car.price)}</p>
-                <button onclick="showCarDetails(${car.id})">Detajet</button>
+                <p style="font-weight: bold; color: #2c3e50; margin-bottom: 15px;">
+                    ${formatPrice(car.price)}
+                </p>
+                <button class="btn-filter" style="width: 100%; height: auto;" onclick="showCarDetails(${car.id})">
+                    Detajet
+                </button>
             </div>
         </div>
     `;
