@@ -62,6 +62,11 @@ function initPage() {
         setupFilters();
         setupTable();
     }
+    
+    // SHTOJE KËTË PJESË KËTU:
+    if (page === "services.html") {
+        setupServiceAnimations();
+    }
 }
 
 function displayFeaturedCars() {
@@ -213,5 +218,35 @@ function initJQueryEffects() {
 function setupGlobalEvents() {
     document.addEventListener("keydown", e => {
         if (e.key === "Escape") closeModal();
+    });
+}
+// Funksioni për interaktivitetin e faqes Services
+function setupServiceAnimations() {
+    // Kur klikon butonin "Rezervo" te tabela e çmimeve
+    const bookButtons = document.querySelectorAll('.btn-book');
+    bookButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Merr emrin e shërbimit nga rreshti i tabelës
+            const serviceName = this.closest('tr').cells[0].innerText;
+            alert(`Ju faleminderit! Rezervimi për "${serviceName}" u dërgua me sukses. Do t'ju kontaktojmë së shpejti.`);
+            
+            // Opsionale: E ndryshon butonin pasi klikohet
+            this.textContent = "U dërgua";
+            this.style.background = "#2ecc71";
+            this.disabled = true;
+        });
+    });
+
+    // Animacion i thjeshtë për shfaqjen e kartave
+    const cards = document.querySelectorAll('.service-category, .service-card');
+    cards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "all 0.5s ease forwards";
+        
+        setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }, 150 * index); // I shfaq një nga një me vonesë të vogël
     });
 }
