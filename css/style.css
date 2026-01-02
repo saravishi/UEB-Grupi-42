@@ -103,6 +103,16 @@ h2 {
     transition: all 0.3s ease;
 }
 
+.logo h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+}
 
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
