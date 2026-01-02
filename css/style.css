@@ -103,6 +103,16 @@ h2 {
     transition: all 0.3s ease;
 }
 
+.logo h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+}
 
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
@@ -111,6 +121,11 @@ h2 {
     text-align: center;
     padding: 6rem 2rem;
     margin-bottom: 3rem;
+}
+
+.hero-content h2 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .search-box {
@@ -497,15 +512,16 @@ h2 {
 
 .car-info {
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .car-price-centered {
-    font-weight: bold;
-    color: #2c3e50;
-    font-size: 1.2rem;
-    margin: 10px 0 15px 0;
     display: block;
+    font-weight: 800;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    text-align: center;
 }
 
 .modal-overlay {
