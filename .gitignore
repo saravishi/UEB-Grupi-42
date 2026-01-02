@@ -1,2 +1,2 @@
-# Ignore all node_modules folders
+node_modules/
 react-version/node_modules/
