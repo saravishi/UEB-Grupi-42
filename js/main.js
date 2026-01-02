@@ -57,10 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function initPage() {
     const page = window.location.pathname.split("/").pop();
 
-    if (page === "" || page === "index.html") {
-        displayFeaturedCars();
-    }
-
     if (page === "products.html") {
         displayAllCars();
         setupFilters();
