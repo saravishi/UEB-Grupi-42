@@ -113,6 +113,11 @@ h2 {
     margin-bottom: 3rem;
 }
 
+.hero-content h2 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
 .search-box {
     display: flex;
     max-width: 600px;
@@ -497,15 +502,16 @@ h2 {
 
 .car-info {
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .car-price-centered {
-    font-weight: bold;
-    color: #2c3e50;
-    font-size: 1.2rem;
-    margin: 10px 0 15px 0;
     display: block;
+    font-weight: 800;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .modal-overlay {
