@@ -1,4 +1,5 @@
-## Car Marketplace - UEB-GRUPI-42-1
+
+## Car Marketplace - AutoShitje (UEB-GRUPI-42-1)
 Ky projekt është një platformë moderne për blerjen dhe shitjen e makinave, i ndërtuar si pjesë e lëndës së Teknologjive Web. Projekti përfshin një version statik (HTML/CSS/JS) dhe një version të avancuar të ndërtuar me React.
 
 ## Struktura e Projektit
@@ -8,45 +9,57 @@ Versioni Web Klasik: Ndërtuar me HTML5, CSS3 (Grid & Flexbox) dhe JavaScript t�
 
 Versioni React: Një version modern i ndërtuar me React.js dhe Tailwind CSS.
 
-## Dosjet Kryesore:
-index.html: Faqja kryesore me prezantimin e ofertave.
+Dosjet Kryesore:
+index.html: Faqja kryesore me prezantimin e ofertave dhe ballinën.
 
-products.html: Listimi i makinave me sistem filtrimi.
+products.html: Listimi i makinave me sistem filtrimi dinamik.
 
-services.html: Detajet mbi shërbimet dhe çmimore.
+services.html: Detajet mbi shërbimet, çmimore dhe animacionet e rezervimit.
 
 contact.html: Formë kontakti me validim në anën e klientit.
 
-/css: Stilimi i detajuar dhe animacionet.
+about.html: Historia e kompanisë, misioni dhe prezantimi i ekipit.
 
-/js: Logjika e filtrimit dhe validimi i formave.
+/css: Stilimi i detajuar, përdorimi i Grid për seksionet "Misioni" dhe "Statistikat".
+
+/js: Logjika e filtrimit, menaxhimi i carsData, modaleve dhe validimi i formave.
+
+/images: Folderi i optimizuar me fotot e makinave (p.sh. porshe.jpg, Audi-A6.jpg) dhe stafit.
 
 /react-version: Aplikacioni i plotë në React.
 
 ## Teknologjitë e Përdorura
-Front-end: HTML5, CSS3, JavaScript (ES6+).
+Front-end: HTML5, CSS3 (Grid & Flexbox), JavaScript (ES6+).
 
 Frameworks: React.js, Tailwind CSS (në versionin React).
 
-Libraritë: Animacione me CSS dhe validim me JS.
-
+Libraritë: Animacione me CSS, jQuery për efekte vizuale dhe validim me JS.
 
 ## Veçoritë (Features)
 Responsive Design: Faqja përshtatet në të gjitha pajisjet (Mobile, Tablet, Desktop).
 
-Sistemi i Filtrave: Kërkimi i makinave sipas llojit, çmimit ose markës.
+Sistemi i Filtrave të Avancuar: Kërkimi i makinave në kohë reale sipas markës (Mercedes, BMW, Audi, Porsche), çmimit (opsione nën 25,000€) dhe vitit të prodhimit.
+
+Menaxhimi Dinamik i të Dhënave: Përdorimi i një vargu carsData në JavaScript për të gjeneruar automatikisht kartat e makinave dhe rreshtat në tabelë.
+
+Interactive UI & About Us:
+
+Historia & Vlerat: Seksione të strukturuara me CSS Grid për simetri perfekte.
+
+Ekipi: Prezantimi i stafit me foto rrethore dhe efekte interaktive.
+
+Statistikat: Panel modern "Në Numra" për të shfaqur sukseset e biznesit.
 
 Validimi i Formave: Siguron që të dhënat e kontaktit të jenë të sakta përpara dërgimit.
 
-Interactive UI: Përdorimi i React Components për një eksperiencë më të shpejtë përdoruesi.
+Interactive Modals: Klikimi te "Detajet" hap një modal me specifikat teknike të makinës pa lëshuar faqen aktuale.
+
 
 ## Ndarja e punëve
-| Anëtari | Detyra |
+| Anëtari | Detyra |Kontributi Specifik
 | :--- | :--- |
-| **Sara Vishi** | Team Lead, React |
-| **Jona Guri** | Developer, HTML |
-| **Anita Berisha** | Developer, CSS dhe JavaScript |
-
-
+| **Sara Vishi** | Team Lead, React |Arkitektura e projektit dhe integrimi i React.
+| **Jona Guri** | Developer, HTML |Struktura e faqeve dhe seksionet e shërbimeve.
+| **Anita Berisha** | Developer, CSS dhe JavaScript |Stilimi me Grid, logjika e filtrave dhe eventet dinamike.
 
 
